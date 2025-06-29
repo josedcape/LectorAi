@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-space-black-900 text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+  
+  .glow-border {
+    @apply border border-ai-purple-500/50 shadow-lg shadow-ai-purple-500/25;
+  }
+  
+  .holographic-text {
+    background: linear-gradient(45deg, #8B5CF6, #3B82F6, #F59E0B);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographic 3s ease-in-out infinite;
+  }
+  
+  .futuristic-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-ai-purple-600 to-electric-blue-600 
+           hover:from-ai-purple-500 hover:to-electric-blue-500 
+           text-white font-semibold py-3 px-6 rounded-lg
+           transform transition-all duration-300 hover:scale-105
+           shadow-lg hover:shadow-xl hover:shadow-ai-purple-500/25;
+  }
+  
+  .futuristic-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent
+           transform -skew-x-12 -translate-x-full transition-transform duration-700;
+  }
+  
+  .futuristic-button:hover::before {
+    @apply translate-x-full;
+  }
+}
+
+@keyframes holographic {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
