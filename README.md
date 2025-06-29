@@ -88,7 +88,7 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 ## 👨‍💻 Autor
 
-**Jose D. Cape** - [@josedcape](https://github.com/josedcape)
+**Jose Daniel Cano. BOTIDINAMIX** - [@josedcape](https://github.com/josedcape)
 
 ---
 
